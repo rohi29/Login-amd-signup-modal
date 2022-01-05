@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>login and signup modal</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+        <h1 class="headh1">Login and signup Modal</h1>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="loginbtn" onclick="document.getElementById('id01').style.display='block'">Login</button>
+        </div>
+        <div class="col">
+          <button class="signupbtn" onclick="document.getElementById('id02').style.display='block'">Signup</button>
+        </div>
+      </div>
+      <div id="id01" class="modal">
+        <form class="modal-content animate">
+            <span class="close" onclick="document.getElementById('id01').style.display='none'" title="close modal">&times;</span>
+          
+          <div class="fromdatacontainer">
+            <lable for="uname"><b>Username</b></lable>
+          <input type="text" name="uname" placeholder="Enetr Username" required >
+          
+          <lable for="psw"><b>Password</b></lable>
+          <input type="password" name="psw" placeholder="Enetr Password" required >
+          <button class="formLbtn" type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+        <div class="fromdatacontainer">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+
+        </form>
+</div>
+<div id="id02" class="modal">
+  <form class="modal-content">
+    <span class="close" onclick="document.getElementById('id02').style.display='none'" title="close modal">&times;</span>
+   <div class="fromdatacontainer">
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    <div class="clearfix">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="scancelbtn">Cancel</button>
+      <button type="submit" class="ssignupbtn">Sign Up</button>
+    </div>
+   </div>
+
+   </form>
+  
+</div>
+    </div>
+    <script>
+      
+      var modal = document.getElementById('id01');
+       window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+
+      var modal1 = document.getElementById('id02');
+      window.onclick = function(event) {
+          if (event.target == modal1) {
+              modal.style.display = "none";
+          }
+      }
+      </script>
+  
+<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
